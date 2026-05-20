@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" class="dark"> <!-- 'dark' class para modo oscuro por defecto -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Digital - Llantas y Neumáticos</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Iconos (ej. para WhatsApp, búsqueda, etc.) -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body class="bg-gray-900 text-gray-300 font-sans antialiased">
+
+    <!-- ===== CABECERA ===== -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-40 py-4 px-6 shadow-md shadow-black/20">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-white">CATÁLOGO</h1>
+            
+            <!-- Switcher de Categorías -->
+            <div id="category-switcher" class="flex items-center bg-gray-800 rounded-full p-1">
+                <button data-category="llanta" class="category-btn active px-4 py-1 text-sm font-semibold rounded-full">Llantas</button>
+                <button data-category="neumatico" class="category-btn px-4 py-1 text-sm font-semibold rounded-full">Neumáticos</button>
+            </div>
+
+            <!-- Buscador y Controles -->
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <input id="search-input" type="text" placeholder="Buscar modelo..." class="bg-gray-800 border border-gray-700 rounded-full py-2 pl-10 pr-4 w-64 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                </div>
+                <!-- TODO: Interruptor de Tema (Modo Claro/Oscuro) -->
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="container mx-auto p-6">
+        <!-- Filtros -->
+        <section id="filters-container" class="mb-8">
+            <!-- Los filtros se generarán aquí con JS -->
+        </section>
+
+        <!-- Grid de Productos -->
+        <section id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Los productos se inyectarán aquí con JS -->
+        </section>
+    </main>
+
+    <!-- ===== BOTÓN FLOTANTE DE WHATSAPP ===== -->
+    <a id="whatsapp-fab" href="https://wa.me/56977967174?text=Hola,%20visité%20el%20catálogo%20y%20me%20gustaría%20cotizar" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <!-- ===== MODAL DE DETALLE DE PRODUCTO (Oculto por defecto) ===== -->
+    <div id="product-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center">
+        <div id="modal-content" class="bg-gray-800 rounded-lg shadow-xl w-11/12 max-w-4xl p-6 relative">
+            <!-- El contenido del modal se generará aquí con JS -->
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== PLANTILLA DE TARJETA DE PRODUCTO (Para clonar con JS) ===== -->
+    <template id="product-card-template">
+        <div class="product-card bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-transparent hover:border-sky-500 transition-all duration-300">
+            <div class="relative p-4">
+                <img data-field="imagen" src="" alt="Imagen del producto" class="w-full h-48 object-contain transition-transform duration-300">
+            </div>
+            <div class="p-4">
+                <p data-field="marca" class="text-xs text-sky-400 font-semibold uppercase"></p>
+                <h3 data-field="nombre" class="text-lg font-bold text-white truncate"></h3>
+                <p data-field="precio" class="text-xl font-light text-gray-300 mt-1"></p>
+                <a data-field="whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-sky-600 text-white text-center py-2 rounded-md block font-semibold hover:bg-sky-700 transition-colors">
+                    Consultar Stock
+                </a>
+            </div>
+        </div>
+    </template>
+
+    <!-- Script principal -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

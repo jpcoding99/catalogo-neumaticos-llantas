@@ -1,0 +1,32 @@
+[
+  {
+    "id": "neumatico-xbri-brutus-ta",
+    "nombre": "Brutus T/A",
+    "marca": "XBRI",
+    "tipo": "neumatico",
+    "imagen": "assets/img/xbri-brutus-ta.jpg",
+    "variantes": [
+      { "ancho": 205, "perfil": 70, "aro": 15, "precio": 77500 },
+      { "ancho": 31, "perfil": 10.5, "aro": 15, "precio": 110000 },
+      { "ancho": 205, "perfil": 60, "aro": 16, "precio": 72500 },
+      { "ancho": 215, "perfil": 65, "aro": 16, "precio": 82500 },
+      { "ancho": 245, "perfil": 75, "aro": 16, "precio": 107500 },
+      { "ancho": 255, "perfil": 70, "aro": 16, "precio": 112500 },
+      { "ancho": 265, "perfil": 70, "aro": 16, "precio": 125000 },
+      { "ancho": 265, "perfil": 75, "aro": 16, "precio": 127500 },
+      { "ancho": 285, "perfil": 75, "aro": 16, "precio": 145000 },
+      { "ancho": 305, "perfil": 70, "aro": 16, "precio": 170000 },
+      { "ancho": 225, "perfil": 65, "aro": 17, "precio": 92500 },
+      { "ancho": 265, "perfil": 65, "aro": 17, "precio": 125000 },
+      { "ancho": 265, "perfil": 70, "aro": 17, "precio": 135000 },
+      { "ancho": 285, "perfil": 70, "aro": 17, "precio": 147500 },
+      { "ancho": 315, "perfil": 70, "aro": 17, "precio": 175000 },
+      { "ancho": 225, "perfil": 60, "aro": 18, "precio": 102500 },
+      { "ancho": 265, "perfil": 60, "aro": 18, "precio": 130000 },
+      { "ancho": 265, "perfil": 65, "aro": 18, "precio": 135000 },
+      { "ancho": 265, "perfil": 70, "aro": 18, "precio": 145000 },
+      { "ancho": 275, "perfil": 65, "aro": 18, "precio": 145000 },
+      { "ancho": 33, "perfil": 12.5, "aro": 18, "precio": 170000 },
+      { "ancho": 35, "perfil": 12.5, "aro": 18, "precio": 190000 },
+      { "ancho": 35, "perfil": 12.5, "aro": 20, "precio": 195000 }
+    ]
